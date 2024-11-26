@@ -11,17 +11,19 @@ export const Herobar = () => {
 
   let handleSubmit = async (e: any) => {
     e.preventDefault();
+    console.log(process.env.NEXT_PUBLIC_API_HOST);
+    console.log(process.env.NEXT_PUBLIC_API_KEY);
+    console.log(process.env.NEXT_PUBLIC_API_URL);
     if (link) {
       try {
         setAnimation(true);
 
         const response = await axios({
           method: 'POST',
-          url: 'https://social-download-all-in-one.p.rapidapi.com/v1/social/autolink',
+          url: process.env.NEXT_PUBLIC_API_URL,
           headers: {
-            'x-rapidapi-key':
-              '49e5deb775msh9d6dff18330e707p1924e0jsnacf093a432ed',
-            'x-rapidapi-host': 'social-download-all-in-one.p.rapidapi.com',
+            'x-rapidapi-key': process.env.NEXT_PUBLIC_API_KEY,
+            'x-rapidapi-host': process.env.NEXT_PUBLIC_API_HOST,
             'Content-Type': 'application/json',
           },
           data: {
