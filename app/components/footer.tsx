@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
 
         <div className='-mx-2 flex'>
           <a
-            href='https://instagram.com'
+            href='https://www.instagram.com/adullahwebwiz/'
             className='mx-2 text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
             aria-label='Facebook'
           >

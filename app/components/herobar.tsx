@@ -11,9 +11,7 @@ export const Herobar = () => {
 
   let handleSubmit = async (e: any) => {
     e.preventDefault();
-    console.log(process.env.NEXT_PUBLIC_API_HOST);
-    console.log(process.env.NEXT_PUBLIC_API_KEY);
-    console.log(process.env.NEXT_PUBLIC_API_URL);
+
     if (link) {
       try {
         setAnimation(true);
